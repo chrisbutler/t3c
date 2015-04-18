@@ -1,0 +1,28 @@
+<template name="Stories">
+  <ul class="stories">
+    {{#each this}}
+      {{> story}}
+    {{/each}}
+  </ul>
+</template>
+
+<template name="story">
+  <li class="{{current_state}}">
+    <h6 class="left">
+      {{story_type}}
+      <span>{{estimate}}</span>
+    </h6>
+    <h6 class="right">{{current_state}}</h6>
+    <h2>{{name}}</h2>
+    <div class="owners">
+      {{#each owner_ids}}
+        <h6>
+          <a href="{{pathFor 'userStories' user=this}}">
+            {{nameFor this}}
+          </a>
+        </h6>
+      {{/each}}
+    </div>
+    <!-- <h4>{{truncated description}}</h4> -->
+  </li>
+</template>

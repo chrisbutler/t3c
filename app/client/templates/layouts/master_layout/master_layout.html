@@ -1,3 +1,18 @@
 <template name="MasterLayout">
+  {{> nav}}
   {{> yield}}
+</template>
+
+<template name="nav">
+  <div class="user-nav">
+    <ul>
+      {{#each members}}
+        <li>
+          <a data-id="{{person.id}}" href="{{pathFor 'userStories' user=person.id}}">
+            {{person.name}}
+          </a>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
 </template>

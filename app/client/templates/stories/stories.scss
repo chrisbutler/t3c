@@ -1,0 +1,90 @@
+/*****************************************************************************/
+/* Stories: Style */
+/*****************************************************************************/
+
+$box-size: 25%;
+
+.stories {
+  width: 100%;
+  height: 100%;
+  li {
+    position: relative;
+    width: $box-size;
+    height: $box-size;
+    float: left;
+    display: block;
+    overflow: hidden;
+    background: $gray;
+    border: 1px solid $light-gray;
+    box-sizing: border-box;
+    padding: 10px;
+
+    .owners {
+      position: absolute;
+      bottom: 0;
+      padding-bottom: 10px;
+      h6 {
+        color: white;
+        float: left;
+        & + h6 {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    h2, h4, h5, h6 {
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-top: 25px;
+    }
+
+    h4 {
+      margin-top: 15px;
+      font-weight: normal;
+      font-size: 16px;
+    }
+
+    h6 {
+      text-transform: uppercase;
+      color: $light-gray;
+      &.left {
+        font-weight: 300;
+        float: left;
+      }
+      &.right {
+        float: right;
+      }
+      span {
+        font-weight: bold;
+      }
+    }
+
+    &.unstarted {
+      background: $unstarted-color;
+    }
+    &.started {
+      background: $started-color;
+      color: white;
+    }
+    &.finished {
+      background: $finished-color;
+    }
+    &.delivered {
+      background: $delivered-color;
+    }
+    &.accepted {
+      background: $accepted-color;
+    }
+    &.rejected {
+      background: $rejected-color;
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: .75;
+    }
+
+  }
+}

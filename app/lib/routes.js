@@ -10,3 +10,17 @@ Router.route('/', {
   action: 'action',
   where: 'client'
 });
+
+
+Router.route('stories', {
+  name: 'stories',
+  controller: 'StoriesController',
+  where: 'client'
+});
+
+Router.route('stories/:user', {
+  name: 'userStories',
+  template: 'Stories',
+  controller: 'UserStoriesController',
+  where: 'client'
+});
