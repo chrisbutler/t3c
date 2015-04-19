@@ -5,6 +5,7 @@ HomeController = RouteController.extend({
   },
 
   action: function() {
-    this.render('Home');
+    //this.render('Home');
+    Router.go('stories');
   }
 });

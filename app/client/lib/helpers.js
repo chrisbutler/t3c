@@ -1,5 +1,5 @@
 Template.registerHelper('truncated', function(text) {
-  return text && (text.substr(30) + '...');
+  return text && (text.substr(0, 65) + '...');
 });
 
 Template.registerHelper('nameFor', function(id) {

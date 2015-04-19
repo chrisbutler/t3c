@@ -20,9 +20,13 @@ $box-size: 25%;
     padding: 10px;
 
     .owners {
+      box-sizing: border-box;
+      z-index: 1;
       position: absolute;
+      width: 100%;
       bottom: 0;
-      padding-bottom: 10px;
+      left: 0;
+      padding: 5px 10px 10px;
       h6 {
         color: white;
         float: left;
@@ -45,6 +49,10 @@ $box-size: 25%;
       margin-top: 15px;
       font-weight: normal;
       font-size: 16px;
+      color: $white-gray;
+      &.full {
+        display: none;
+      }
     }
 
     h6 {
@@ -63,27 +71,73 @@ $box-size: 25%;
     }
 
     &.unstarted {
-      background: $unstarted-color;
+      &, & .owners {
+        background: $unstarted-color;
+      }
     }
     &.started {
-      background: $started-color;
+      &, & .owners {
+        background: $started-color;
+      }
       color: white;
     }
     &.finished {
-      background: $finished-color;
+      &, & .owners {
+        background: $finished-color;
+      }
     }
     &.delivered {
-      background: $delivered-color;
+      &, & .owners {
+        background: $delivered-color;
+      }
     }
     &.accepted {
-      background: $accepted-color;
+      &, & .owners {
+        background: $accepted-color;
+      }
     }
     &.rejected {
-      background: $rejected-color;
+      &, & .owners {
+        background: $rejected-color;
+      }
     }
+
     &:hover {
       cursor: pointer;
       opacity: .75;
+    }
+
+    &.open {
+      width: 50%;
+      height: 50%;
+      opacity: 1 !important;
+      &, & .owners {
+        &, & a {
+          color: $black;
+        }
+        background: white;
+      }
+      .owners {
+        &:before {
+          position: absolute;
+          content: '';
+          top: -15px;
+          left: 0;
+          width: 100%;
+          height: 15px;
+          @include fade-gradient;
+        }
+      }
+      h4.full {
+        color: $black;
+        display: block;
+        max-height: 80%;
+        position: relative;
+        overflow: hidden;
+      }
+      h4.truncated {
+        display: none;
+      }
     }
 
   }

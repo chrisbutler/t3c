@@ -6,6 +6,11 @@
 <template name="nav">
   <div class="user-nav">
     <ul>
+      <li>
+        <a href="{{pathFor 'stories'}}">
+          All
+        </a>
+      </li>
       {{#each members}}
         <li>
           <a data-id="{{person.id}}" href="{{pathFor 'userStories' user=person.id}}">

@@ -1,6 +1,9 @@
 /*****************************************************************************/
 /* main: Style */
 /*****************************************************************************/
+
+@import "client/stylesheets/partials/colors.scss";
+
 $black: #252729;
 $gray: #424242;
 $light-gray: #696969;
@@ -12,12 +15,19 @@ $light-blue: #3498DB;
 $blaze: #E74C3C;
 $green: #22a144;
 
-$unstarted-color: #7b9bb2;
-$started-color: #aaadb0;
-$finished-color: #2b5487;
-$delivered-color: #f39300;
+// $unstarted-color: #7b9bb2;
+// $started-color: #aaadb0;
+// $finished-color: #2b5487;
+// $delivered-color: #f39300;
+// $rejected-color: #a71f39;
+// $accepted-color: $green;
+
+$unstarted-color: $blaze;
+$started-color: #AEAEAE;
+$finished-color: $medium-blue;
+$delivered-color: $dark-blue;
 $rejected-color: #a71f39;
-$accepted-color: $green;
+$accepted-color: #1BBC7B;
 
 
 html, body {
@@ -49,6 +59,11 @@ html, body {
           &.active {
             background: white;
             color: $black;
+          }
+          &.previously-selected {
+            text-decoration: line-through;
+            background: $gray;
+            color: $light-gray;
           }
         }
       }

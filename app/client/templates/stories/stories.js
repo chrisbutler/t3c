@@ -2,6 +2,10 @@
 /* Stories: Event Handlers */
 /*****************************************************************************/
 Template.Stories.events({
+  'click .stories li': function(evt, tpl) {
+    tpl.$('.open').not(evt.currentTarget).removeClass('open');
+    $(evt.currentTarget).toggleClass('open');
+  }
 });
 
 /*****************************************************************************/
