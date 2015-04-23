@@ -1,3 +1,29 @@
+$black: #252729;
+$gray: #424242;
+$light-gray: #696969;
+$medium-gray: #989898;
+$white-gray: #ECF0F1;
+
+$dark-blue: #2C3E50;
+$medium-blue: #2980B9;
+$light-blue: #3498DB;
+$blaze: #E74C3C;
+$green: #22a144;
+
+// $unstarted-color: #7b9bb2;
+// $started-color: #aaadb0;
+// $finished-color: #2b5487;
+// $delivered-color: #f39300;
+// $rejected-color: #a71f39;
+// $accepted-color: $green;
+
+$unstarted-color: $blaze;
+$started-color: #AEAEAE;
+$finished-color: $medium-blue;
+$delivered-color: $dark-blue;
+$rejected-color: #a71f39;
+$accepted-color: #1BBC7B;
+
 @mixin fade-gradient {
   background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0) 1%, rgba(255,255,255,1) 73%, rgba(255,255,255,1) 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(1%,rgba(255,255,255,0)), color-stop(73%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */

@@ -1,29 +1,65 @@
 <template name="Stories">
   <ul class="stories">
+    <div class="grid-sizing"></div>
     {{#each this}}
-      {{> story}}
+      <li>
+        {{> story}}
+      </li>
     {{/each}}
   </ul>
 </template>
 
+<template name="MasonryStories">
+  {{#masonryContainer columnWidth=".grid-sizing"  id="cardwall"}}
+    <div class="grid-sizing"></div>
+    {{#each this}}
+      {{#masonryElement "cardwall"}}
+        {{> story}}
+      {{/masonryElement}}
+    {{/each}}
+  {{/masonryContainer}}
+</template>
+
 <template name="story">
-  <li class="{{current_state}}">
+  <div class="story-wrapper {{current_state}}">
+    {{> top}}
+    {{> _story}}
+    {{> owners}}
+  </div>
+</template>
+
+<template name="_story">
+  <h2>{{name}}</h2>
+  <h4 class="truncated">
+    {{truncated description}}
+  </h4>
+  <h4 class="full">
+    {{description}}
+  </h4>
+</template>
+
+<template name="top">
+  <div class="info">
     <h6 class="left">
       {{story_type}}
-      <span>{{estimate}}</span>
+      <span>
+        {{estimate}}
+      </span>
     </h6>
-    <h6 class="right">{{current_state}}</h6>
-    <h2>{{name}}</h2>
-    <div class="owners">
-      {{#each owner_ids}}
-        <h6>
-          <a href="{{pathFor 'userStories' user=this}}">
-            {{nameFor this}}
-          </a>
-        </h6>
-      {{/each}}
-    </div>
-    <h4 class="truncated">{{truncated description}}</h4>
-    <h4 class="full">{{description}}</h4>
-  </li>
+    <h6 class="right">
+      {{current_state}}
+    </h6>
+  </div>
+</template>
+
+<template name="owners">
+  <div class="owners">
+    {{#each owner_ids}}
+      <h6>
+        <a href="{{pathFor 'userStories' user=this}}">
+          {{nameFor this}}
+        </a>
+      </h6>
+    {{/each}}
+  </div>
 </template>

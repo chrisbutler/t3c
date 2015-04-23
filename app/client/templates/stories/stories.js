@@ -8,6 +8,15 @@ Template.Stories.events({
   }
 });
 
+Template.MasonryStories.events({
+  'click .masonry-container .masonry-element': function(evt, tpl) {
+    console.log('click');
+    tpl.$('.open').not(evt.currentTarget).removeClass('open');
+    $(evt.currentTarget).toggleClass('open');
+    tpl.$('.masonry-container').masonry();
+  }
+});
+
 /*****************************************************************************/
 /* Stories: Helpers */
 /*****************************************************************************/
@@ -21,7 +30,14 @@ Template.Stories.created = function () {
 };
 
 Template.Stories.rendered = function () {
+  console.log('stories rendered');
+  // $('ul.stories').masonry({
+  //   columnWidth: '.grid-sizing',
+  //   percentPosition: true,
+  //   itemSelector: '.stories li'
+  // });
 };
 
 Template.Stories.destroyed = function () {
+  console.log('stories destroyed');
 };

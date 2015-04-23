@@ -12,6 +12,7 @@ StoriesController = RouteController.extend({
     ];
   },
   onRun: function() {
+    console.log('stories run')
     Meteor.call('/members/get');
     Meteor.call('/iteration/get');
     this.next();

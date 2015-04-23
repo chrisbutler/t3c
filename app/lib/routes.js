@@ -14,13 +14,22 @@ Router.route('/', {
 
 Router.route('stories', {
   name: 'stories',
+  template: 'MasonryStories',
   controller: 'StoriesController',
   where: 'client'
 });
 
 Router.route('stories/:user', {
   name: 'userStories',
-  template: 'Stories',
+  template: 'MasonryStories',
   controller: 'UserStoriesController',
   where: 'client'
+});
+
+
+Router.route('webhooks/pivotal', {
+  name: 'webhooksPivotal',
+  controller: 'PivotalController',
+  action: 'action',
+  where: 'server'
 });
