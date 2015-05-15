@@ -5,9 +5,11 @@
 # but you can also edit it by hand.
 
 meteor-platform
-insecure
+accounts-password
+
 iron:router
 fourseven:scss
-chrisbutler:pivotaljs
-accounts-password
 robodo:masonrify
+
+chrisbutler:pivotaljs
+chrisbutler:accounts-pivotal

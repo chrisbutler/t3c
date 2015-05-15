@@ -14,7 +14,7 @@ $box-size: 250px;
 
   li, .masonry-element {
     width: $box-size;
-    height: $box-size;
+    height: $box-size - 100;
     float: left;
     display: block;
     overflow: hidden;
@@ -110,8 +110,8 @@ $box-size: 250px;
     }
 
     &.open {
-      width: $box-size * 2;
-      height: $box-size * 2;
+      width: $box-size * 1.25;
+      height: $box-size * 1.25;
       opacity: 1 !important;
       & .story-wrapper, & .owners {
         &, & a {

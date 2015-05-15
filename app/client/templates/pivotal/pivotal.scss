@@ -3,3 +3,17 @@
 /*****************************************************************************/
 .pivotal {
 }
+
+.sign-in-form {
+  padding: 0 15px 15px;
+  input, .input-group-addon {
+    border-radius: 0;
+  }
+  .input-group {
+    margin-bottom: 10px;
+  }
+  .btn-submit {
+    text-transform: uppercase;
+    padding: 12px;
+  }
+}
