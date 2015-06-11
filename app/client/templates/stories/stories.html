@@ -20,6 +20,18 @@
   {{/masonryContainer}}
 </template>
 
+<template name="ColumnStories">
+  {{#each this}}
+    <ul class="stories column {{this.[0]}}">
+      {{#each this.[1]}}
+        <li>
+          {{> story}}
+        </li>
+      {{/each}}
+    </ul>
+  {{/each}}
+</template>
+
 <template name="story">
   <div class="story-wrapper {{current_state}}">
     {{> top}}

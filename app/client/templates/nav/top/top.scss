@@ -1,0 +1,30 @@
+/*****************************************************************************/
+/* Top: Style */
+/*****************************************************************************/
+.user-nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  overflow: hidden;
+  background: $dark-black;
+  ul {
+    li {
+      float: left;
+      a {
+        display: block;
+        font-size: 14px;
+        padding: 10px;
+        &.active {
+          background: white;
+          color: $black;
+        }
+        &.previously-selected {
+          text-decoration: line-through;
+          background: $gray;
+          color: $light-gray;
+        }
+      }
+    }
+  }
+}

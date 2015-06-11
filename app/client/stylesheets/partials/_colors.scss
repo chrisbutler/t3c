@@ -1,3 +1,4 @@
+$dark-black: #181818;
 $black: #252729;
 $gray: #424242;
 $light-gray: #696969;
@@ -7,6 +8,7 @@ $white-gray: #ECF0F1;
 $dark-blue: #2C3E50;
 $medium-blue: #2980B9;
 $light-blue: #3498DB;
+$orange: #e78812;
 $blaze: #E74C3C;
 $green: #22a144;
 
@@ -17,7 +19,7 @@ $green: #22a144;
 // $rejected-color: #a71f39;
 // $accepted-color: $green;
 
-$unstarted-color: $blaze;
+$unstarted-color: $orange;
 $started-color: #AEAEAE;
 $finished-color: $medium-blue;
 $delivered-color: $dark-blue;

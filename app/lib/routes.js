@@ -21,7 +21,7 @@ Router.route('stories', {
 
 Router.route('stories/:user', {
   name: 'userStories',
-  template: 'MasonryStories',
+  template: 'ColumnStories',
   controller: 'UserStoriesController',
   where: 'client'
 });
